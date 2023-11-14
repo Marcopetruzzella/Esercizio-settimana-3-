@@ -199,9 +199,6 @@ switch (sett) {
 */
 
 
-/*---------- ESERCIZIO 8 DA RIVEDERE */
-
-
 console.log("ESERCIZIO 8 ")
 function dice(){console.log ("ciao")}
 
@@ -260,7 +257,7 @@ console.log(new Date (1991, 7, 28))
 } */
 
 // 28 AGOSTO 
-function isTodayMyBirthday (x){   
+function isTodayMyBirthday (){   
   let date = new Date()
   let giorno = date.getDay()
   let mese = date.getMonth()
@@ -592,6 +589,7 @@ let ul =document.querySelector('#mylist')
 ul.appendChild(li)
 
 
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
@@ -646,3 +644,29 @@ addtr()
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+function isItPrime(){
+  let n = prompt('Inserisci un numero: ');
+  while (n < 0){
+     n = prompt('Inserisci un numero: ');
+  }
+    
+   let div = 1;
+   let conta=0;
+    
+   while(conta <= 1 && div <= n/2) {
+     if(n % div == 0)  {
+    conta++;	
+     }
+     div++;
+   }
+    
+   if (conta == 1){
+     document.write('Il numero è primo ');
+   }   
+   else {
+      document.write('Il numero non è primo ');
+   }
+
+
+}
+let numeroprimo = isItPrime()
